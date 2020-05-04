@@ -3,6 +3,7 @@
  * @copyright    2018 Ansimuz
  * @license      {@link https://opensource.org/licenses/MIT | MIT License}
  * Get free assets and code at: www.pixelgameart.org
+ * 
  * */
 
 var audioFlag = true;
