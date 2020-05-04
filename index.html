@@ -7,12 +7,37 @@
     <link rel="stylesheet" href="game.css">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <script type="text/javascript" src="phaser.min.js"></script>
-    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/entities/Arrow.js"></script>
+    <script type="text/javascript" src="js/entities/Coin.js"></script>
+    <script type="text/javascript" src="js/entities/EnemyDeath.js"></script>
+    <script type="text/javascript" src="js/entities/Gem.js"></script>
+    <script type="text/javascript" src="js/entities/Mole.js"></script>
+    <script type="text/javascript" src="js/entities/Player.js"></script>
+    <script type="text/javascript" src="js/entities/Treant.js"></script>
+    <script type="text/javascript" src="js/screens/boot.js"></script>
+    <script type="text/javascript" src="js/screens/gameOver.js"></script>
+    <script type="text/javascript" src="js/screens/playGame.js"></script>
+    <script type="text/javascript" src="js/screens/preload.js"></script>
+    <script type="text/javascript" src="js/screens/titleScreen.js"></script>
     <meta name="viewport" content="initial-scale=1 user-scalable=0" />
 </head>
 
 <body onload="initGame()">
     <p class="hiddenText"> . </p>
+
+    <script>
+
+        function initGame() {
+            game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, "");
+            game.state.add('Boot', boot);
+            game.state.add('Preload', preload);
+            game.state.add('TitleScreen', titleScreen);
+            game.state.add('PlayGame', playGame);
+            game.state.add('GameOver', gameOver);
+            game.state.start("Boot");
+        }
+    </script>
 </body>
 
 </html>
