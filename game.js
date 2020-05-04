@@ -32,7 +32,7 @@ var hurtFlag;
 var exit;
 var kills = 5;
 
-window.onload = function () {
+function initGame() {
 
     game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, "");
     game.state.add('Boot', boot);
